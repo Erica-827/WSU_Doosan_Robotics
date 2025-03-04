@@ -60,13 +60,14 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```
 Gazebo Installation
 ```
+
 # Add Gazebo repository
-sudo sh -c ’ echo " deb http://packages.osrfoundation.org/gazebo/ubuntu-stable ‘lsb_release -cs‘ main" > /etc/apt/sources.list.d/ gazebo-stable.list’
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+# Install Gazebo and related ROS 2 packages
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt-get update
-# Install Gazebo and related ROS 2 packages
+sudo apt-get install -y libignition-gazebo6-dev ros-humble-gazebo-ros-pkgs ros-humble-ros-gz-sim ros-humble-ros-gz
 sudo apt-get install -y libignition-gazebo6-dev
-sudo apt-get install -y ros-humble-gazebo-ros-pkgs ros-humble-moveit-msgs ros-humble-ros-gz-sim ros-humble-ros-gz
 ```
 3. Setup the ROS workplace <br>
 
