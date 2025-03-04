@@ -72,4 +72,7 @@ sudo apt-get install -y ros-humble-gazebo-ros-pkgs ros-humble-moveit-msgs ros-hu
 Clone the Github Repo
 ```
 git clone https://github.com/Erica-827/WSU_Doosan_Robotics.git
+cd WSU_Doosan_Robotics/src
+git clone https://github.com/doosan-robotics/doosan-robot.git
+cd ..
 ```
