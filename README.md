@@ -76,3 +76,7 @@ cd WSU_Doosan_Robotics/src
 git clone https://github.com/doosan-robotics/doosan-robot.git
 cd ..
 ```
+Build the files, this may take a while
+```
+colcon build
+```
