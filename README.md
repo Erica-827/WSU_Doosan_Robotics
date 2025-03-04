@@ -6,7 +6,9 @@ The Doosan Robotics Package can be cloned from https://github.com/doosan-robotic
 
 1. Install a VM of Ubuntu 22.04
 
-2. Run the following Commands
+2. Installation of packages and dependencies
+
+ROS 2 Humble Install
 ```
 sudo apt install software - properties - common
 sudo add - apt - repository universe
@@ -18,6 +20,9 @@ echo " deb [ arch = $ ( dpkg -- print - architecture ) signed - by =/ usr /share
 # Update package lists
 sudo apt update
 sudo apt upgrade
+```
+Installing Dependencies
+```
 # Update and install general dependencies
 sudo apt - get update
 sudo apt - get install -y libpoco - dev libyaml - cpp - dev wget
@@ -27,11 +32,16 @@ sudo apt - get install -y ros - humble - control - msgs ros - humble -realtime -
 sudo apt install ros - humble - desktop
 # Install ROS 2 development tools
 sudo apt install ros - dev - tools
+```
+ROS 2 Setup
+```
 # Source the ROS 2 setup file
 source / opt / ros / humble / setup . bash
 Add to . bashrc to automatically source on terminal startup
 echo ’ source / opt / ros / humble / setup . bash ’ >> ~/. bashrc
-# Verify ROS 2. The code should display ros2 help instructions
+```
+Docker Installation
+```
 # Add Docker ’ s official GPG key
 sudo apt - get update
 sudo apt - get install ca - certificates curl
@@ -42,7 +52,13 @@ sudo chmod a + r / etc / apt / keyrings / docker . asc
 echo \" deb [ arch = $ ( dpkg -- print - architecture ) signed - by =/ etc / apt /keyrings / docker . asc ] https :// download . docker . com / linux / ubuntu \$ (. / etc / os - release && echo " $ { UBUNTU_CODENAME : - $VERSION_CODENAME} " ) stable " | \
 sudo tee / etc / apt / sources . list . d / docker . list > / dev / null
 sudo apt - get update
+```
+Intall Docker Packages
+```
 sudo apt - get install docker - ce docker - ce - cli containerd . io docker- buildx - plugin docker - compose - plugin
+```
+Gazebo Installation
+```
 # Add Gazebo repository
 sudo sh -c ’ echo " deb http :// packages . osrfoundation . org / gazebo /ubuntu - stable ‘ lsb_release -cs ‘ main " > / etc / apt / sources . list . d/ gazebo - stable . list ’
 wget http :// packages . osrfoundation . org / gazebo . key -O - | sudo apt- key add -
