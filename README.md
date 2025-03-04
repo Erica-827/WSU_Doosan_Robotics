@@ -51,21 +51,21 @@ sudo chmod a + r /etc/apt/keyrings/docker.asc
 # Add the repository to Apt sources
 echo \" deb [ arch = $ ( dpkg -- print - architecture ) signed - by =/ etc / apt /keyrings / docker . asc ] https :// download . docker . com / linux / ubuntu \$ (. / etc / os - release && echo " $ { UBUNTU_CODENAME : - $VERSION_CODENAME} " ) stable " | \
 sudo tee / etc / apt / sources . list . d / docker . list > / dev / null
-sudo apt - get update
+sudo apt-get update
 ```
 Intall Docker Packages
 ```
-sudo apt - get install docker - ce docker - ce - cli containerd . io docker- buildx - plugin docker - compose - plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 Gazebo Installation
 ```
 # Add Gazebo repository
 sudo sh -c ’ echo " deb http :// packages . osrfoundation . org / gazebo /ubuntu - stable ‘ lsb_release -cs ‘ main " > / etc / apt / sources . list . d/ gazebo - stable . list ’
-wget http :// packages . osrfoundation . org / gazebo . key -O - | sudo apt- key add -
-sudo apt - get update
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt- key add -
+sudo apt-get update
 # Install Gazebo and related ROS 2 packages
-sudo apt - get install -y libignition - gazebo6 - dev
-sudo apt - get install -y ros - humble - gazebo - ros - pkgs ros - humble -moveit - msgs ros - humble - ros - gz - sim ros - humble - ros - gz
+sudo apt-get install -y libignition-gazebo6-dev
+sudo apt-get install -y ros-humble-gazebo-ros-pkgs ros-humble-moveit-msgs ros-humble-ros-gz-sim ros-humble-ros-gz
 ```
 3. Setup the ROS workplace <br>
 
