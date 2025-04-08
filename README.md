@@ -89,12 +89,17 @@ colcon build
 
 Connect to the robot via ethernet cable and turn of device Wifi and the robot arm controller is turned on
 
+Set network settings to the following
+****![image](https://github.com/user-attachments/assets/6cbbfe9c-02d7-4631-a681-bb6f184074ca)
+
+
 Ping the arm
 ```
-ping 19.168.137.100
+ping 192.168.137.100
 ```
 
-If data is recieved back then connect to the arm by running 
+If data is recieved back then connect to the arm by running
+
 
 ```
 ros2 launch dsr_bringup2 dsr_bringup2_moveit.launch.py mode:=real model:=a0509 host:=192.168.137.100
