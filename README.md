@@ -87,7 +87,7 @@ colcon build
 ```
 4. Connecting to the arm with Moveit2 <br>
 
-Connect to the robot via ethernet cable and turn of device Wifi and the robot arm controller is turned on
+Connect to the arm via ethernet and turn off device Wifi, ensure the robot arm controller is turned on <br>
 
 Set network settings to the following <br>
 ![image](https://github.com/user-attachments/assets/6cbbfe9c-02d7-4631-a681-bb6f184074ca)
