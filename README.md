@@ -80,6 +80,7 @@ cd doosan-robot2
 chmod +x ./install_emulator.sh
 sudo ./install_emulator.sh
 cd ..
+cd ..
 ```
 Build the files, this may take a while (if errors occur, build again)
 ```
