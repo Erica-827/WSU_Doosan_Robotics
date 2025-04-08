@@ -75,10 +75,30 @@ Clone the Github Repo
 ```
 git clone https://github.com/Erica-827/WSU_Doosan_Robotics.git
 cd WSU_Doosan_Robotics/src
-git clone https://github.com/doosan-robotics/doosan-robot.git
+git clone https://github.com/DoosanRobotics/doosan-robot2
+cd doosan-robot2
+chmod +x ./install_emulator.sh
+sudo ./install_emulator.sh
 cd ..
 ```
-Build the files, this may take a while
+Build the files, this may take a while (if errors occur, build again)
 ```
 colcon build
 ```
+4. Connecting to the arm with Moveit2 <br>
+
+Connect to the robot via ethernet cable and turn of device Wifi and the robot arm controller is turned on
+
+Ping the arm
+```
+ping 19.168.137.100
+```
+
+If data is recieved back then connect to the arm by running 
+
+```
+ros2 launch dsr_bringup2 dsr_bringup2_moveit.launch.py mode:=real model:=a0509 host:=192.168.137.100
+```
+
+
+
