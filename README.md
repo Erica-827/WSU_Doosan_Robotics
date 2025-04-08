@@ -89,8 +89,8 @@ colcon build
 
 Connect to the robot via ethernet cable and turn of device Wifi and the robot arm controller is turned on
 
-Set network settings to the following
-****![image](https://github.com/user-attachments/assets/6cbbfe9c-02d7-4631-a681-bb6f184074ca)
+Set network settings to the following <br>
+![image](https://github.com/user-attachments/assets/6cbbfe9c-02d7-4631-a681-bb6f184074ca)
 
 
 Ping the arm
